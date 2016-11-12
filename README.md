@@ -6,3 +6,7 @@ A C compiler is needed to be installed in your PC/mobile
 
 [*] Initial release
 
+# [1.1]
+
+[*] Bug Fixes
+
