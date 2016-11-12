@@ -26,12 +26,12 @@ void main()
 
     }
     int j;
-    printf("SL\tSubject\t\tCredits\tGPA\tTotal\n");
+    printf("\nSL\tSubject\t\tCredits\t\tGPA\t\tTotal\n");
     for(j=0; j<i; j++)
     {
         Tcr+=a[j].credit;
         Tcg+=a[j].total;
-        printf("%d\t%-12s\t%.2lf\t%.2lf\t%.2lf\n",j+1, a[j].name, a[j].credit,a[j].gpa, a[j].total);
+        printf("%d\t%-12s\t%.2lf\t\t%.2lf\t\t%.2lf\n",j+1, a[j].name, a[j].credit,a[j].gpa, a[j].total);
     }
     printf("\nCGPA = %.4lf\n", Tcg/Tcr);
     return 0;
