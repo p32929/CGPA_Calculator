@@ -10,3 +10,7 @@ A C compiler is needed to be installed in your PC/mobile
 
 [*] Bug Fixes
 
+# [E]
+
+[*] For seeing expected CGPA
+
