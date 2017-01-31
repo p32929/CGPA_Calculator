@@ -14,3 +14,6 @@ A C compiler is needed to be installed in your PC/mobile
 
 [*] For seeing expected CGPA
 
+
+
+# An android version of CGPA Calculator is available here: http://tiny.cc/CGPA_Calculator_by_p32929
