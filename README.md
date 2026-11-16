@@ -1,29 +1,41 @@
-# CGPA Calculator
+# CGPA Calculator (C)
 
-A simple terminal CGPA calculator written in C. Enter each subject's code, credit hours and GPA, and it prints a table plus your credit-weighted CGPA.
+A small terminal CGPA calculator written in C. Type in each subject's code, credit hours and GPA, and it prints a neat table and your CGPA, weighted by credits. No spreadsheet and no app needed, just a C compiler.
 
-There's also an Android version: http://tiny.cc/cgpa
+There is also an Android version: [CGPA Calculator on OpenStore](https://openstore.pfay.workers.dev/app/p32929/cgpa-calculator).
 
 ## Which file to use
 
-| File | Notes |
-|---|---|
-| `CGPA_Calculator 1.1.c` | Latest — prints a per-subject table with totals |
-| `CGPA_Calculator 1.0.c` | The first version |
-| `CGPA_Calculator E.c` | An extended variant |
-
-## Prerequisites
-
-A C compiler (`gcc`, `clang`, MinGW — anything).
+1. **`CGPA_Calculator 1.1.c`:** the latest. Prints a table of every subject with its total, then your CGPA.
+2. **`CGPA_Calculator 1.0.c`:** the first version.
+3. **`CGPA_Calculator E.c`:** the "what if" version. After the table, type a subject's number and the GPA you expect, and it shows your new CGPA. Type `0` to stop. It also saves your subjects to `z.txt`.
 
 ## Build and run
+
+You need a C compiler, like `gcc`, `clang` or MinGW.
 
 ```bash
 gcc "CGPA_Calculator 1.1.c" -o cgpa
 ./cgpa
 ```
 
-Then enter the number of subjects, and for each one its code, credits and GPA.
+On a Mac, Apple's `clang` refuses the old `void main()`, so add one flag:
+
+```bash
+clang -Wno-return-mismatch "CGPA_Calculator 1.1.c" -o cgpa
+```
+
+Then enter how many subjects you have, and for each one its code, credits and GPA. For example, CSE101 with 3 credits and GPA 3.5 plus MAT101 with 3 credits and GPA 4.0 gives:
+
+```
+SL	Subject		Credits		GPA		Total
+1	CSE101      	3.00		3.50		10.50
+2	MAT101      	3.00		4.00		12.00
+
+CGPA = 3.7500
+```
+
+Subject codes can be up to 9 characters long.
 
 ## License
 
@@ -31,33 +43,12 @@ MIT License — Copyright (c) 2020 Fayaz Bin Salam.
 
 ## Contributing
 
-Contributions are warmly welcomed and greatly appreciated! Whether it's a bug fix, new feature, or improvement, your input helps make this project better for everyone.
-
-Before submitting a pull request, please:
-
-1. Create an issue describing the feature or bug fix you'd like to work on
-2. Wait for discussion and approval to ensure alignment with project goals
-3. Fork the repository and create your feature branch
-4. Submit your pull request with a clear description of changes
-
-This approach helps avoid duplicate efforts and ensures smooth collaboration. Thank you for considering contributing!
+Contributions are very welcome, thank you! Before you start on a pull request, please open an issue and tell me what you would like to add or change. That way we can agree on it first, and your time is not wasted on something that might not fit. Thanks for helping make CGPA Calculator better.
 
 ## Share
 
-Sharing this repository with your friends is just one click away from here
-
-[![facebook](https://user-images.githubusercontent.com/6418354/179013321-ac1d1452-0689-493f-9066-940cf2302b6e.png)](https://www.facebook.com/sharer/sharer.php?u=https://github.com/p32929/CGPA_Calculator/)
-[![twitter](https://user-images.githubusercontent.com/6418354/179013351-7d8d6d1c-4ce2-46ab-bef8-4c4765a1b888.png)](https://twitter.com/intent/tweet?url=https://github.com/p32929/CGPA_Calculator/)
-[![tumblr](https://user-images.githubusercontent.com/6418354/179013343-3111f55a-3b90-40c7-8487-9777348672b0.png)](https://www.tumblr.com/share?v=3&u=https://github.com/p32929/CGPA_Calculator/)
-[![pocket](https://user-images.githubusercontent.com/6418354/179013334-b095c45f-becf-49f4-9ee1-5a731a9b1f85.png)](https://getpocket.com/save?url=https://github.com/p32929/CGPA_Calculator/)
-[![pinterest](https://user-images.githubusercontent.com/6418354/179013331-44cd9206-11b1-4b65-becb-5863b61c828f.png)](https://pinterest.com/pin/create/button/?url=https://github.com/p32929/CGPA_Calculator/)
-[![reddit](https://user-images.githubusercontent.com/6418354/179013338-7416ae3f-73ba-4522-86e1-1374d7082d22.png)](https://www.reddit.com/submit?url=https://github.com/p32929/CGPA_Calculator/)
-[![linkedin](https://user-images.githubusercontent.com/6418354/179013327-ca7b7102-1da8-4b1c-858f-1a6e5f21bd70.png)](https://www.linkedin.com/shareArticle?mini=true&url=https://github.com/p32929/CGPA_Calculator/)
-[![whatsapp](https://user-images.githubusercontent.com/6418354/179013353-f477fa0b-3e6f-4138-a357-c9991b23ff88.png)](https://api.whatsapp.com/send?text=https://github.com/p32929/CGPA_Calculator/)
-
----
+<a href="https://p32929.github.io/share/?repo=CGPA_Calculator"><img src="https://p32929.github.io/readme/share.svg" alt="Share this with your friends in just a click" width="420"></a>
 
 ## Support
 
-If you like my works and want to support me/my works, feel free to support or donate. My payment details can be found here: https://p32929.github.io/SendMoney2MeV1/
-
+<a href="https://p32929.github.io/support/"><img src="https://p32929.github.io/readme/support.svg" alt="If you like my works and want to support me, feel free to support" width="420"></a>
